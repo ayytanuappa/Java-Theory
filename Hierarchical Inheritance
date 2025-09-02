@@ -1,0 +1,43 @@
+package Com.Sample;
+
+
+//base class
+class Account {
+  void accountType() {
+      System.out.println("This is a General account.");
+  }
+}
+
+//Parent class 
+class SavingsAccount extends Account {
+  void accountType() {
+      System.out.println("Savings account is ACTIVE.");
+  }
+}
+
+//child class 
+class CurrentAccount extends Account {
+  void accountType() {
+      System.out.println("Current account is INACTIVE.");
+  }
+}
+
+//Main class
+public class HierarchicalInheritance {
+  public static void main(String[] args) {
+  	Account general = new Account();
+      SavingsAccount savings = new SavingsAccount();
+      CurrentAccount current = new CurrentAccount();
+
+      general.accountType();
+      savings.accountType(); 
+      current.accountType(); 
+      
+  }
+}
+
+
+output:
+This is a General account.
+Savings account is ACTIVE.
+Current account is INACTIVE.
