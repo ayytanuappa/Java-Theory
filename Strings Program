@@ -1,0 +1,70 @@
+package Com.sample;
+import java.util.Scanner;
+
+public class StringOperations {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first string: ");
+        String str1 = sc.nextLine();
+
+        System.out.print("Enter second string: ");
+        String str2 = sc.nextLine();
+
+        // 1. Comparison of 2 strings
+        if (str1.equals(str2)) {
+            System.out.println("Both strings are equal.");
+        } else {
+            System.out.println("Strings are not equal.");
+        }
+
+        // 2. Concatenation
+        String concat = str1 + " " + str2;
+        System.out.println("Concatenated string: " + concat);
+
+        // 3. Length of string
+        System.out.println("Length of first string: " + str1.length());
+        System.out.println("Length of second string: " + str2.length());
+
+        // 4. Indexing (1D and 2D)
+        // 1D indexing
+        if (str1.length() > 0) {
+            System.out.println("First character of first string: " + str1.charAt(0));
+        }
+
+        // 2D indexing
+        String[] words = str1.split(" ");
+        if (words.length > 0 && words[0].length() > 0) {
+            System.out.println("2D indexing [word 0, char 0]: " + words[0].charAt(0));
+        }
+
+        // 5. Slicing
+        if (str1.length() >= 3) {
+            System.out.println("Slice of first string (0 to 3): " + str1.substring(0, 3));
+        }
+
+        // 6. Reversing string
+        String reversed = new StringBuilder(str1).reverse().toString();
+        System.out.println("Reversed first string: " + reversed);
+
+        // 7. Replacing characters
+        String replaced = str1.replace('a', '@');
+        System.out.println("First string after replacing 'a' with '@': " + replaced);
+
+        sc.close();
+    }
+}
+
+Output :
+Enter first string: Sun is bright
+Enter second string: Night is dark
+Strings are not equal.
+Concatenated string: Sun is bright Night is dark
+Length of first string: 13
+Length of second string: 13
+First character of first string: S
+2D indexing [word 0, char 0]: S
+Slice of first string (0 to 3): Sun
+Reversed first string: thgirb si nuS
+First string after replacing 'a' with '@': Sun is bright
+
