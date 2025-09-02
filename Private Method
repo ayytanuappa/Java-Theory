@@ -1,0 +1,32 @@
+package Com.Sample;
+
+class Person {
+    // private variable
+    private String name;
+    // public setter
+    public void setName(String name) {
+        this.name = name;
+    }
+    // public getter
+    public String getName() {
+        return this.name;
+    }
+    // 🔹 PRIVATE METHOD
+    private void greet() {
+        System.out.println("Hello! Welocme to Java Program Miss " + name);
+    }
+    // public method to access private method
+    public void introduce() {
+        greet();  // calling private method from inside
+    }
+}
+public class PrivateMethod {
+    public static void main(String[] args) {
+        Person p1 = new Person();
+        p1.setName("Tanusree");
+        p1.introduce(); // PRIVATE METHOD CALLED USING INTRODUCE(PUBLIC)
+    }
+}
+
+Output:
+Hello! Welocme to Java Program Miss Tanusree
