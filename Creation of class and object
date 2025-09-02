@@ -1,0 +1,40 @@
+package Com.Sample;
+
+class Student {
+    // Properties of a class
+    String name;
+    long mobileNo;
+
+    // Behaviour of a class
+    void displayInfo() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Mobile No: " + mobileNo);
+    }
+}
+
+public class Education {
+    public static void main(String[] args) {
+        // Create objects for Student class
+        Student std1 = new Student();
+        Student std2 = new Student();
+
+        // Assign values to variables
+        std1.name = "Rani";
+        std1.mobileNo = 9965818574L;
+
+        // Display std1 details
+        std1.displayInfo();
+
+        // Assign values to variables
+        std2.name = "Mahesh";
+        std2.mobileNo = 1234567892L;
+
+        // Display std2 details
+        std2.displayInfo();
+    }
+}
+output:
+Student Name: Rani
+Student Mobile No: 9965818574
+Student Name: Mahesh
+Student Mobile No: 1234567892
